@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voting System</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Include the ethers.js library for Ethereum support in JavaScript. -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <h1>Voting System</h1>
+      <p>Create a voting session and vote for your favorite options using this smart contract.</p>
+      <br />
+
+      <h3>Create a voting session:</h3>
+      <label for="question">Question:</label>
+      <input type="text" id="question" />
+      <br />
+      <label for="options">Options (separated by commas):</label>
+      <input type="text" id="options" />
+      <br />
+      <button onclick="createSession()">Create Session</button>
+
+      <h3>Vote:</h3>
+      <label for="sessionId">Session ID:</label>
+      <input type="text" id="sessionId" />
+      <br />
+      <label for="option">Option:</label>
+      <input type="text" id="option" />
+      <br />
+      <button onclick="vote()">Vote</button>
+
+      <h3>Get Session Results:</h3>
+      <label for="resultsSessionId">Session ID:</label>
+      <input type="text" id="resultsSessionId" />
+      <br />
+      <button onclick="getSessionResults()">Get Results</button>
+      <div id="results"></div>
+
+      <h3>Get Vote Count:</h3>
+      <label for="countSessionId">Session ID:</label>
+      <input type="text" id="countSessionId" />
+      <br />
+      <label for="countOption">Option:</label>
+      <input type="text" id="countOption" />
+      <br />
+      <button onclick="getVoteCount()">Get Vote Count</button>
+      <p id="voteCountResult"></p>
+
+      <h3>Get All Sessions:</h3>
+      <button onclick="getAllSessions()">Get All Sessions</button>
+      <div id="allSessions"></div>
+
+
+    </div>
+  </body>
+</html>
